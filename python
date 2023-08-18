@@ -1,0 +1,85 @@
+if number % 3 == 0 and number % 5 == 0:
+    print('fizzbuzz') 
+    
+elif number % 3 == 0:
+    print('fizz')
+
+elif number % 5 == 0:
+    print('buzz')
+
+else:
+    print(number)
+
+
+
+ #!/usr/bin/env python3
+    2 
+    3 def steg_encode_char(char, cover):
+    4     charbin = format(ord(char), '0>8b')
+    5     for index in range (0,len(cover)):
+    6         coverbinl = list(format(int(cover[index]), '0>8b'))
+    7         print (coverbinl)
+    8         coverbinl [-1] = charbin[index]
+    9         cover[index] = str(int(''.join(coverbinl),2))
+   10     pass
+   11 
+   12 def steg_decode_char(stego):
+   13     msgbits = []
+   14     for b in stego:
+   15         msgbits.append(bin(int(b))[-1])
+   16     return chr(int(''.join(msgbits),2))
+   17     pass
+   18 
+   19 if __name__ == '__main__':
+   20     pass
+  ~                                            
+
+
+
+#!/usr/bin/env python3
+    2 
+    3 def guess_number(n):
+    4     guess = int(input('Guess a number: '))
+    5     while guess != n:
+    6             if guess < n:
+    7                 guess = int(input('Too low, enter a new number: '))
+    8 
+    9             elif guess > n:
+   10                 guess = int(input('Too high, enter a new number: '))
+   11 
+   12             else:
+   13                 break
+   14 
+   15     print('WIN')
+   16 
+   17 pass
+   18 
+   19 guess_number(23)
+
+
+
+
+
+1 #!/usr/bin/env python3
+    2 
+    3 def invert(l):
+    4     '''for n in range(0,len(l)):
+    5     l[n] = str(255 - int(l[n]))'''
+    6     
+    7     '''counts = 0
+    8     for num in l:
+    9     l[counts] = str(255-int(num))
+   10     counts += 1'''
+   11     for count, value in enumertate(l):
+   12         l[count] = str(255 - int(value))
+   13         pass
+   14 
+   15 def inverted(l):
+   16     result = []
+   17     for n in l:
+   18         result.append(str(255 - int(n)))
+   19         return result
+   20     pass
+   21 
+   22 if __name__ == '__main__':
+   23     pass
